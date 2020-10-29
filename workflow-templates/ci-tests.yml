@@ -1,0 +1,52 @@
+name: "Continuous Integration Tests"
+
+on:
+  pull_request:
+    types:
+      - synchronize
+      - opened
+
+
+jobs:
+  ci-tests:
+    name: Continuous integration tests
+    runs-on: ubuntu-latest
+    env:
+      # TODO add all required environment variables
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+          submodules: recursive
+          fetch-depth: 0
+      - name: GitHub Slug
+        uses: rlespinasse/github-slug-action@2.1.0
+
+      # TODO replace this with actions for setting up project build environment
+      - uses: borales/actions-yarn@v2.0.0
+
+      - name: Cache dependencies
+        id: cache_dependencies
+        uses: actions/cache@v2
+        with:
+          # TODO: Dependency paths go here
+          path: |
+            ~/example/path
+          key: dependencies-${{ github.sha }}
+
+      - name: Cache build
+        id: cache_release_build
+        uses: actions/cache@v2
+        with:
+          # TODO: Build output paths go here
+          path: |
+            ~/example/path
+          key: ci-build-${{ github.sha }}
+
+      - name: Build
+        if: steps.cache_release_build.outputs.cache-hit != 'true'
+        uses: ./.github/actions/build
+
+      - name: Test
+        uses: ./.github/actions/test

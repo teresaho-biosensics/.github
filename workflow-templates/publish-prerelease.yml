@@ -1,0 +1,109 @@
+name: "Publish pre-release"
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  prerelease:
+    name: Publish pre-release
+    runs-on: ubuntu-latest
+    env:
+      # TODO add all required environment variables
+
+    steps:
+      - name: Extract version from branch name (for release branches)
+        if: startsWith(github.event.pull_request.head.ref, 'release/')
+        run: |
+          BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
+          VERSION=${BRANCH_NAME#release/}
+          echo "::set-env name=RELEASE_VERSION::$VERSION"
+      - name: Extract version from branch name (for hotfix branches)
+        if: startsWith(github.event.pull_request.head.ref, 'hotfix/')
+        run: |
+          BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
+          VERSION=${BRANCH_NAME#hotfix/}
+          echo "::set-env name=RELEASE_VERSION::$VERSION"
+
+
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+          submodules: recursive
+          fetch-depth: 0
+      - name: GitHub Slug
+        uses: rlespinasse/github-slug-action@2.1.0
+
+      # TODO replace this with actions for setting up project build environment
+      - uses: borales/actions-yarn@v2.0.0
+
+      - name: Update Release Version
+        run: echo "RELEASE_VERSION=${RELEASE_VERSION}-rc.${GITHUB_SHA_SHORT}" >> $GITHUB_ENV
+
+      - name: Cache dependencies
+        id: cache_dependencies
+        uses: actions/cache@v2
+        with:
+          # TODO: Dependency paths go here
+          path: |
+            ~/example/path
+          key: dependencies-${{ github.sha }}
+
+      - name: Cache build
+        id: cache_release_build
+        uses: actions/cache@v2
+        with:
+          # TODO: Build output paths go here
+          path: |
+            ~/example/path
+          key: prerelease-build-${{ github.sha }}
+
+      - name: Bump version
+        uses: ./.github/actions/bump-version
+        with:
+          new-version: ${{ env.RELEASE_VERSION }}
+
+      - name: Build
+        if: steps.cache_release_build.outputs.cache-hit != 'true'
+        uses: ./.github/actions/build
+
+      - name: Package Pre-Release
+        id: package
+        uses: ./.github/actions/package-prerelease
+
+      - name: Create Pre-Release
+        id: create_release
+        uses: thomaseizinger/create-release@1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+        with:
+          target_commitish: ${{ github.sha }}
+          tag_name: ${{ env.RELEASE_VERSION }}
+          name: ${{ env.RELEASE_VERSION }}
+          draft: false
+          prerelease: true
+
+      - name: Upload Release Assets
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ steps.package.outputs.asset_path }}
+          asset_name: ${{ steps.package.outputs.asset_name }}
+          asset_content_type: application/octet-stream
+
+      - name: Link to release in PR comment
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+          script: |
+            await github.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ github.event.pull_request.number }},
+              body: "Release candidate ${{ env.RELEASE_VERSION }} available for download [here](${{ steps.create_release.outputs.html_url }})"
+            })
+
+      - name: Deploy release
+        uses: ./.github/actions/deploy-prerelease
