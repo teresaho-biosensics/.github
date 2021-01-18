@@ -1,32 +1,22 @@
-name: "Nightly build and testing"
+name: "Build and test develop manually"
 
 on:
-  schedule:
-    - cron: 0 23 * * *
-
+  workflow_dispatch:
+#  push:
+#    branches:
+#      - develop
 
 jobs:
-  check-for-previous:
-    name: Check for previous nightly tag
-    runs-on: ubuntu-latest
-    outputs:
-      previous-nightly: ${{ steps.check.outputs.previous-nightly }}
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: develop
-          token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
-          fetch-depth: 0
-      - id: check
-        run: git describe --tags --exact-match --match nightly-* && echo "::set-output name=previous-nightly::true" || echo "::set-output name=previous-nightly::false"
-
-  nightly-release:
-    name: Publish nightly release
-    needs: check-for-previous
-    if: ${{ needs.check-for-previous.outputs.previous-nightly != 'true' }}
+  develop-release:
+    name: Publish develop release
     runs-on: ubuntu-latest
     env:
       # TODO add all required environment variables
+      keyStoreFile: ${{ secrets.ANDROID_KEYSTORE_FILE }}
+      keyStorePassword: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+      keyAlias: ${{ secrets.ANDROID_KEY_ALIAS }}
+      keyPassword: ${{ secrets.ANDROID_KEY_PASSWORD }}
+      mailgunApiKey: ${{ secrets.MAILGUN_API_KEY }}
 
     steps:
       - uses: actions/checkout@v2
@@ -37,16 +27,14 @@ jobs:
           fetch-depth: 0
       - name: GitHub Slug
         uses: rlespinasse/github-slug-action@3.2.0
-
-      # TODO replace this with actions for setting up project build environment
       - uses: borales/actions-yarn@v2.0.0
 
       - name: Date
         run: |
-          echo "DATE_STR=$(date +%Y.%m.%d)" >> $GITHUB_ENV
+          echo "DATE_STR=$(date +%Y.%m.%d_%H.%M)" >> $GITHUB_ENV
 
       - name: Update Release Version
-        run: echo "RELEASE_VERSION=nightly-${DATE_STR}+${GITHUB_SHA_SHORT}" >> $GITHUB_ENV
+        run: echo "RELEASE_VERSION=develop-${DATE_STR}-${GITHUB_SHA_SHORT}" >> $GITHUB_ENV
 
       - name: Cache dependencies
         id: cache_dependencies
@@ -54,7 +42,12 @@ jobs:
         with:
           # TODO: Dependency paths go here
           path: |
-            ~/example/path
+            ~/.gradle/wrapper/
+            ./build/intermediates/lint-cache
+            ./webapp/node_modules
+            ~/.gradle/caches
+            ~/.m2/repository
+            node_modules
           key: dependencies-${{ github.sha }}
 
       - name: Cache build
@@ -63,8 +56,8 @@ jobs:
         with:
           # TODO: Build output paths go here
           path: |
-            ~/example/path
-          key: nightly-build-${{ github.sha }}
+            ./app/main/assets
+          key: develop-build-${{ github.sha }}
 
       - name: Bump version
         uses: ./.github/actions/bump-version
@@ -86,11 +79,11 @@ jobs:
         id: create_release
         uses: thomaseizinger/create-release@1.0.0
         env:
-          GITHUB_TOKEN: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           target_commitish: ${{ github.sha }}
           tag_name: ${{ env.RELEASE_VERSION }}
-          name: Nightly ${{ env.DATE_STR }}
+          name: Develop ${{ env.DATE_STR }}
           draft: false
           prerelease: true
 
@@ -108,5 +101,6 @@ jobs:
           asset_name: ${{ env.ASSET_NAME }}
           asset_content_type: application/octet-stream
 
-      - name: Deploy release
-        uses: ./.github/actions/deploy-nightly
+#      Skip nightly deploy for develop builds
+#      - name: Deploy release
+#        uses: ./.github/actions/deploy-nightly

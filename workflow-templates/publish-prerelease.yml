@@ -32,13 +32,13 @@ jobs:
           submodules: recursive
           fetch-depth: 0
       - name: GitHub Slug
-        uses: rlespinasse/github-slug-action@2.1.0
+        uses: rlespinasse/github-slug-action@3.2.0
 
       # TODO replace this with actions for setting up project build environment
       - uses: borales/actions-yarn@v2.0.0
 
       - name: Update Release Version
-        run: echo "RELEASE_VERSION=${RELEASE_VERSION}-rc.${GITHUB_SHA_SHORT}" >> $GITHUB_ENV
+        run: echo "RELEASE_VERSION=${RELEASE_VERSION}-rc.${GITHUB_EVENT_PULL_REQUEST_HEAD_SHA_SHORT}" >> $GITHUB_ENV
 
       - name: Cache dependencies
         id: cache_dependencies

@@ -40,6 +40,17 @@ jobs:
             $RELEASE_ISSUE_URL \
             -d '{"state":"closed"}'
 
+       - uses: actions/checkout@v2
+         with:
+           token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+           submodules: recursive
+           fetch-depth: 0
+       - name: GitHub Slug
+         uses: rlespinasse/github-slug-action@3.2.0
+
+       - name: Update Release Version (commit SHA meta)
+         run: echo "RELEASE_VERSION=${RELEASE_VERSION}+${GITHUB_EVENT_PULL_REQUEST_HEAD_SHA_SHORT}" >> $GITHUB_ENV
+
       - name: Create Release
         id: create_release
         uses: thomaseizinger/create-release@1.0.0
@@ -64,14 +75,6 @@ jobs:
             This happens to ensure that the updates that happend on the release branch, i.e. CHANGELOG and manifest updates are also present on the dev branch.
       # if needed, you can checkout the latest master here, build artifacts and publish / deploy them somewhere
       # the create-release action has an output `upload_url` output that you can use to upload assets
-
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
-          submodules: recursive
-          fetch-depth: 0
-      - name: GitHub Slug
-        uses: rlespinasse/github-slug-action@2.1.0
 
       # TODO replace this with actions for setting up project build environment
       - uses: borales/actions-yarn@v2.0.0
