@@ -16,7 +16,6 @@ jobs:
         with:
           ref: develop
           token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
-          fetch-depth: 0
       - id: check
         run: git describe --tags --exact-match --match nightly-* && echo "::set-output name=previous-nightly::true" || echo "::set-output name=previous-nightly::false"
 
@@ -34,7 +33,6 @@ jobs:
           ref: develop
           token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
           submodules: recursive
-          fetch-depth: 0
       - name: GitHub Slug
         uses: rlespinasse/github-slug-action@3.2.0
 

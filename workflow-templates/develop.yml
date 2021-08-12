@@ -24,7 +24,6 @@ jobs:
           ref: develop
           token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
           submodules: recursive
-          fetch-depth: 0
       - name: GitHub Slug
         uses: rlespinasse/github-slug-action@3.2.0
       - uses: borales/actions-yarn@v2.0.0
