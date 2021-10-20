@@ -7,6 +7,7 @@ assignees: '@abbylindsay'
 
 ---
 Initial request:
+
 **Partial or full V&V? Justify:**
 
 **Due date? Justify:**
@@ -15,8 +16,8 @@ Initial request:
 
 
 V&V Checklist:
-- [ ] Request ECO number from quality@biosensics.com
-- [ ] ECO Section I completed and approved https://docs.google.com/document/d/1VT1eRY61YnCZ6oYi3iR8jAJJViJGsvyk/edit
+- [ ] Request ECO number from [Quality](mailto:quality@biosensics.com)
+- [ ] ECO Section I completed and approved (G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation)
 - [ ] Equiptment set up
 - [ ] Server configured
 - [ ] Test account created
