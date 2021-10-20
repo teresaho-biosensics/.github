@@ -11,13 +11,15 @@ assignees: '@abbylindsay'
 
 **What should the app be named:**
 
-**What features are needed? Zoom?:**
+**What features are needed? (E.g., Zoom, BioDigit Clinic, etc.):**
 
-**Mobile device model needed?:**
+**Mobile device size or model needed?:**
 
-**Does the app need to connect to parse?:**
+**If applicable, number of mobile devices needed?:**
 
-**PAMSys/LEGSys? Are sensors needed? How many?:**
+**Does the app need to connect to Parse?:**
+
+**Are sensors needed (E.g., PAMSys, LEGSys, PAMSys Product)? If so, how many?:**
 
 **Priority level and need by date? Justify:**
 
