@@ -29,6 +29,6 @@ V&V Checklist:
 *Ensure all above items have been completed before continuing*
 - [ ] V&V executed
 - [ ] Attach filled out V&V to this issue
-- [ ] Configure production server (
+- [ ] Configure production server (if not an initial release)
 - [ ] ECO Section II completed and approved
 - [ ] Attach ECO to this issue
