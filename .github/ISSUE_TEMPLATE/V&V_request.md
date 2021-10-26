@@ -20,7 +20,7 @@ Does the V&V or SRS need to be revised?:
 
 ***V&V Checklist:***
 
-@biosensics/software :
+@biosensics/software : 
 - [ ] Determine if full or partial V&V is needed
 - [ ] Request ECO number from [Quality](mailto:quality@biosensics.com)
 - [ ] ECO Section I completed and approved (G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation)
