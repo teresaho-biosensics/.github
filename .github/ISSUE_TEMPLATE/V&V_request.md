@@ -34,11 +34,12 @@ Does the V&V or SRS need to be revised?:
 - [ ] Attach V&V PDF to this issue
 
 *Ensure all above items have been completed before continuing*
-@biosensics/test-and-manufacturing
+
+@biosensics/test-and-manufacturing :
 - [ ] V&V executed
 - [ ] Attach filled out V&V to this issue
 
-@biosensics/engineering
+@biosensics/engineering :
 - [ ] Configure production server (if not an initial release)
 - [ ] ECO Section II completed and approved
 - [ ] Attach ECO to this issue
