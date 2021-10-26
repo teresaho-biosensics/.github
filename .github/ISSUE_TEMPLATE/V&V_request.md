@@ -43,7 +43,7 @@ Does the V&V or SRS need to be revised?:
 
 @biosensics/test-and-manufacturing :
 - [ ] V&V executed
-- [ ] Attach filled out V&V to this issue
+- [ ] Attach completed V&V to this issue
 
 @biosensics/engineering :
 - [ ] Configure production server (if not an initial release)
