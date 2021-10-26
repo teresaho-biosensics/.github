@@ -29,8 +29,8 @@ Does the V&V or SRS need to be revised?:
 - [ ] CLI tool set up
 
 @biosensics/operations :
-- [ ] Equiptment set up
-- [ ] Test account created
+- [ ] Equipment set up
+- [ ] Parse account created
 - [ ] Attach V&V PDF to this issue
 
 *Ensure all above items have been completed before continuing*
