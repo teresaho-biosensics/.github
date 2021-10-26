@@ -29,8 +29,12 @@ Does the V&V or SRS need to be revised?:
 - [ ] CLI tool set up
 
 @biosensics/operations :
-- [ ] Equiptment set up
-- [ ] Test account created
+- [ ] Hexnode portal/policy set up
+- [ ] Mobile device operating system is correct
+- [ ] Mobile device model is correct
+- [ ] Sensor firmware is correct
+- [ ] Device enrolled in Hexnode
+- [ ] Parse account created in correct server
 - [ ] Attach V&V PDF to this issue
 
 *Ensure all above items have been completed before continuing*
