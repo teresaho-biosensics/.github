@@ -8,21 +8,28 @@ assignees: '@abbylindsay'
 ---
 ***Please title the issue with the detailed study/project name (not just company/hospital name)***
 
-Initial request:
+**Initial request:**
 
-**Partial or full V&V? Justify:**
+Please explain why a V&V is needed:
 
-**Due date? Justify:**
+Due date? Justify:
 
-**Does the V&V or SRS need to be revised?:**
+Does the V&V or SRS need to be revised?:
 
 
-V&V Checklist:
+
+***V&V Checklist:***
+
+@biosensics/software :
+- [ ] Determine if full or partial V&V is needed
 - [ ] Request ECO number from [Quality](mailto:quality@biosensics.com)
 - [ ] ECO Section I completed and approved (G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation)
-- [ ] Equiptment set up
 - [ ] Server has been configured
 - [ ] APK connects to server (test, or production for initial release)
+- [ ] CLI tool set up
+
+@biosensics/operations :
+- [ ] Equiptment set up
 - [ ] Test account created
 - [ ] Attach V&V PDF to this issue
 
