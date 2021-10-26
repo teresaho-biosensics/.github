@@ -27,8 +27,14 @@ Does the V&V or SRS need to be revised?:
 - [ ] Server has been configured
 - [ ] APK connects to server (test, or production for initial release)
 - [ ] CLI tool set up
+- [ ] Parse account created in correct server
 
 @biosensics/operations :
+- [ ] Hexnode portal/policy set up
+- [ ] Mobile device operating system is correct
+- [ ] Mobile device model is correct
+- [ ] Sensor firmware is correct
+- [ ] Device enrolled in Hexnode
 - [ ] Equipment set up
 - [ ] Parse account created
 - [ ] Attach V&V PDF to this issue
