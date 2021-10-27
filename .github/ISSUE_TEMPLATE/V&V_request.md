@@ -47,5 +47,7 @@ Does the V&V or SRS need to be revised?:
 
 @biosensics/engineering :
 - [ ] Configure production server (if not an initial release)
+
+@biosensics/quality :
 - [ ] ECO Section II completed and approved
 - [ ] Attach ECO to this issue
