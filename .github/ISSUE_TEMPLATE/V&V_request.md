@@ -7,6 +7,7 @@ assignees: '@abbylindsay'
 
 ---
 ***Please title the issue with the detailed study/project name (not just company/hospital name)***
+Note: not applicable items will 
 
 **Initial request:**
 
@@ -34,6 +35,7 @@ Additional Comments?
 - [ ] Parse account created in correct server
 
 @biosensics/operations :
+- [ ] Complete DCO and submit to [Quality](mailto:quality@biosensics.com)
 - [ ] Hexnode portal/policy set up
 - [ ] Mobile device operating system is correct
 - [ ] Mobile device model is correct (version, iOS/Android, etc.)
