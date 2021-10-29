@@ -7,7 +7,8 @@ assignees: '@abbylindsay'
 
 ---
 ***Please title the issue with the detailed study/project name (not just company/hospital name)***
-Note: not applicable items will 
+
+Note: not applicable items will be stuck through
 
 **Initial request:**
 
