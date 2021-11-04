@@ -33,7 +33,6 @@ Additional Comments?
 - [ ] Server has been configured
 - [ ] APK connects to server (indicate if Test, Production, UAT or QA)
 - [ ] CLI tools set up
-- [ ] Parse account created in correct server
 
 @biosensics/operations :
 - [ ] Complete DCO and submit to [Quality](mailto:quality@biosensics.com)
@@ -43,7 +42,7 @@ Additional Comments?
 - [ ] Sensor firmware is correct
 - [ ] Device enrolled in Hexnode
 - [ ] Equipment set up for V&V execution
-- [ ] Parse account created
+- [ ] Parse account created in correct server
 
 *Ensure all above items have been completed before continuing*
 
