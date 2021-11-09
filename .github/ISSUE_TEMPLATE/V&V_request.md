@@ -30,7 +30,9 @@ Additional Comments?
 - [ ] ECO Section I submitted to [Quality](mailto:quality@biosensics.com)
       (`G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation`)
 - [ ] ECO Section I approved
-- [ ] Server has been configured
+- [ ] Create server code release
+- [ ] Deploy server code
+- [ ] Confirm server configuration values
 - [ ] APK connects to server (indicate if Test, Production, UAT or QA)
 - [ ] CLI tools set up
 
