@@ -7,10 +7,10 @@ assignees: '@abbylindsay'
 
 ---
 
-**Describe the work you would like completed:**
+**Describe the work you would like completed and why:**
 <!-- A clear and concise description of what problem you are trying to solve -->
 
-**Propose your solution and if there are limitations to the solution, then justify:**
+**Propose your solution (if applicable):**
 <!-- Does this problem have to solved a certain way or can it be open to engineering creativity so long as it accomplishes the goal -->
 
 **Indicate the priority level and justify due date:**
