@@ -72,6 +72,7 @@ Note: not applicable items will be struck through
 - [ ] Merge `release` branch into `master` on Server repository to finish the release
 - [ ] Deploy server release to Aptible production server
 - [ ] Confirm any updated Aptible production server configuration values
+- [ ] Merge `release` branch into `master` on server repository
 - [ ] Merge `release` branch into `master` on Application repository
 - [ ] Send release APK to operations and quality for production use
 
