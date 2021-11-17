@@ -37,6 +37,7 @@ Note: not applicable items will be struck through
 - [ ] Create server code release
 - [ ] Deploy server code
 - [ ] Confirm server configuration values
+- [ ] Confirm internal Zoom meeting room
 - [ ] APK connects to server (indicate if Test, Production, UAT or QA)
 - [ ] CLI tools set up
 
