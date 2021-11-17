@@ -69,6 +69,7 @@ Note: not applicable items will be struck through
 - [ ] Server ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
 - [ ] Server ECO Section II approved
 - [ ] Create server release
+- [ ] Merge `release` branch into `master` on Server repository to finish the release
 - [ ] Deploy server release to Aptible production server
 - [ ] Confirm any updated Aptible production server configuration values
 - [ ] Merge `release` branch into `master` on Application repository
