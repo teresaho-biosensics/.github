@@ -37,6 +37,7 @@ Note: not applicable items will be struck through
 - [ ] Create server release issue in server repository using the Release Issue template 
 - [ ] Deploy server release candidate to Aptible test server
 - [ ] Confirm any updated Aptible test server configuration values
+- [ ] Confirm internal Zoom meeting room
 - [ ] APK connects to server (indicate if Test, Production, UAT or QA)
 - [ ] CLI tools set up
 
