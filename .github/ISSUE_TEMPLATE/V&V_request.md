@@ -8,17 +8,17 @@ assignees: '@abbylindsay'
 ---
 ***Please title the issue with the detailed study/project name (not just company/hospital name)***
 
-Note: not applicable items will be stuck through
+Note: not applicable items will be struck through
 
 **Initial request:**
 
-Please explain why a V&V is needed:
+**Please explain why a V&V is needed**:
 
-Will design documentation require revisions?
+**Will design documentation require revisions?**
 
-Due date? Justify:
+**Due date? Justify:**
 
-Additional Comments?
+**Additional Comments?**
 
 
 
@@ -26,17 +26,22 @@ Additional Comments?
 
 @biosensics/engineering : 
 - [ ] Team lead determine if full or partial V&V is needed
-- [ ] Request ECO number from [Quality](mailto:quality@biosensics.com)
-- [ ] ECO Section I submitted to [Quality](mailto:quality@biosensics.com)
+- [ ] Request App ECO number from [Quality](mailto:quality@biosensics.com)
+- [ ] App ECO Section I submitted to [Quality](mailto:quality@biosensics.com)
       (`G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation`)
-- [ ] ECO Section I approved
+- [ ] App ECO Section I approved
+- [ ] Request Server ECO number from [Quality](mailto:quality@biosensics.com)
+- [ ] Server ECO Section I submitted to [Quality](mailto:quality@biosensics.com)
+      (`G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation`)
+- [ ] Server ECO Section I approved
 - [ ] Create server code release
 - [ ] Deploy server code
 - [ ] Confirm server configuration values
 - [ ] APK connects to server (indicate if Test, Production, UAT or QA)
 - [ ] CLI tools set up
 
-@biosensics/operations :
+@biosensics/operations & @biosensics/quality :
+- [ ] V&V Document Released
 - [ ] Complete DCO and submit to [Quality](mailto:quality@biosensics.com)
 - [ ] Hexnode portal/policy set up
 - [ ] Mobile device operating system is correct
@@ -54,10 +59,13 @@ Additional Comments?
 
 @biosensics/engineering :
 - [ ] Configure production server (if not an initial release)
-- [ ] ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
-- [ ] ECO Section II approved
+- [ ] App ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
+- [ ] App ECO Section II approved
+- [ ] Server ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
+- [ ] Server ECO Section II approved
 
 @biosensics/quality :
-- [ ] ECO closed filed to QSR
+- [ ] App ECO closed & filed to QSR
+- [ ] Server ECO closed & filed to QSR
 - [ ] Insert file path(s) to documentation (ECO, V&V etc):
 - [ ] New version released
