@@ -63,6 +63,7 @@ Note: not applicable items will be struck through
 - [ ] App ECO Section II approved
 - [ ] Server ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
 - [ ] Server ECO Section II approved
+- [ ] Ensure correct Zoom meeting room is set
 - [ ] Create server release
 - [ ] Deploy server release to Aptible production server
 - [ ] Confirm any updated Aptible production server configuration values
