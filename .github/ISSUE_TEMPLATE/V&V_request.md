@@ -34,9 +34,9 @@ Note: not applicable items will be struck through
 - [ ] Server ECO Section I submitted to [Quality](mailto:quality@biosensics.com)
       (`G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation`)
 - [ ] Server ECO Section I approved
-- [ ] Create server code release
-- [ ] Deploy server code
-- [ ] Confirm server configuration values
+- [ ] Create server release issue in server repository using the Release Issue template 
+- [ ] Deploy server release candidate to Aptible test server
+- [ ] Confirm any updated Aptible test server configuration values
 - [ ] APK connects to server (indicate if Test, Production, UAT or QA)
 - [ ] CLI tools set up
 
@@ -58,11 +58,14 @@ Note: not applicable items will be struck through
 - [ ] Completed V&V submitted to [Quality](mailto:quality@biosensics.com)
 
 @biosensics/engineering :
-- [ ] Configure production server (if not an initial release)
 - [ ] App ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
 - [ ] App ECO Section II approved
 - [ ] Server ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
 - [ ] Server ECO Section II approved
+- [ ] Create server release
+- [ ] Deploy server release to Aptible production server
+- [ ] Confirm any updated Aptible production server configuration values
+
 
 @biosensics/quality :
 - [ ] App ECO closed & filed to QSR
