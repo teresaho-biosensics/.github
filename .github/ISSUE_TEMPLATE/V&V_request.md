@@ -39,6 +39,7 @@ Note: not applicable items will be struck through
 - [ ] Set GitHub secrets per server configuration values and Zoom (if applicable)
 - [ ] Update Application `CHANGELOG.md` "Unreleased" section
 - [ ] Create application release issue in application repository using the Release Issue template
+- [ ] Link this issue to the correct release version
 - [ ] Request App ECO number from [Quality](mailto:quality@biosensics.com)
 - [ ] App ECO Section I submitted to [Quality](mailto:quality@biosensics.com)
       (`G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation`)
