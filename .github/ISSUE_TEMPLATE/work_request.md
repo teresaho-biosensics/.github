@@ -1,7 +1,7 @@
 ---
 name: Work Request
 about: Request for engineering work
-title: 'Operations Work Request'
+title: 'Work Request'
 labels: 
 assignees: '@abbylindsay'
 
