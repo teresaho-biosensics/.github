@@ -1,5 +1,5 @@
 ---
-name: Operations Work Request
+name: Work Request
 about: Request for engineering work
 title: 'Operations Work Request'
 labels: 
