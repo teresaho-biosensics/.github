@@ -10,8 +10,6 @@ assignees: '@abbylindsay'
 
 Note: not applicable items will be struck through
 
-**Initial request:**
-
 **Please explain why a V&V is needed**:
 
 **Will design documentation require revisions?**
