@@ -18,6 +18,8 @@ Note: not applicable items will be struck through
 
 **Due date? Justify:**
 
+**File path to V&V document (if exisiting):**
+
 **Additional Comments?**
 
 
@@ -46,6 +48,8 @@ Note: not applicable items will be struck through
 - [ ] App ECO Section I approved
 - [ ] CLI tools set up
 - [ ] Send Application RC build to operations team for V&V
+- [ ] App link to source code
+- [ ] Server link to source code:
 
 @biosensics/operations & @biosensics/quality :
 - [ ] V&V Document Released
