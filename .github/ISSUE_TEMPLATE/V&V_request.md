@@ -78,7 +78,7 @@ Server:
 - [ ] Create server release
 - [ ] Deploy server release to Aptible production server
 - [ ] Confirm any updated Aptible production server configuration values
-- [ ] Merge `release` branch into `master` on server repository
+- [ ] Merge `release` branch into `develop` on server repository
 
 Application:
 - [ ] App ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
