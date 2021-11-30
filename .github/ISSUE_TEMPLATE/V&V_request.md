@@ -92,3 +92,6 @@ Application:
 - [ ] Server ECO closed & filed to QSR
 - [ ] Insert file path(s) to documentation (ECO, V&V etc):
 - [ ] New version released
+
+**@biosensics/operations :**
+- [ ] Confirm zoom room on release build
