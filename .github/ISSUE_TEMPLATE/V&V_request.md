@@ -47,11 +47,11 @@ Application:
       (`G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation`)
 - [ ] App ECO Section I approved
 - [ ] CLI tools set up
-- [ ] Confirm internal Zoom meeting room
-- [ ] Set GitHub secrets per server configuration values and Zoom (if applicable)
+- [ ] Confirm internal telehealth meeting room
+- [ ] Set GitHub secrets per server configuration values and telehealth meeting room
 - [ ] APK connects to server (indicate if Test, Production, UAT or QA)
 - [ ] Send Application RC build to operations team for V&V
-- [ ] App link to source code
+- [ ] App link to source code:
 
 **@biosensics/operations & @biosensics/quality :**
 - [ ] V&V Document Released
@@ -70,19 +70,20 @@ Application:
 - [ ] V&V executed
 - [ ] Completed V&V submitted to [Quality](mailto:quality@biosensics.com)
 
+**@biosensics/quality :**
+- [ ] Approve completed V&V
+
 **@biosensics/engineering :**
 
 Server:
-- [ ] Server ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
-- [ ] Server ECO Section II approved
+- [ ] Send tagged release source code zip to @biosensics/quality
 - [ ] Create server release
 - [ ] Deploy server release to Aptible production server
 - [ ] Confirm any updated Aptible production server configuration values
 - [ ] Merge `release` branch into `develop` on server repository
 
 Application:
-- [ ] App ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
-- [ ] App ECO Section II approved
+- [ ] Send apk and installer to @biosensics/quality
 - [ ] Merge `release` branch into `master` on Application repository
 - [ ] Send release APK to operations and quality for production use
 
@@ -94,4 +95,4 @@ Application:
 - [ ] New version released
 
 **@biosensics/operations :**
-- [ ] Confirm zoom room on release build
+- [ ] Confirm telehealth meeting room on release build
