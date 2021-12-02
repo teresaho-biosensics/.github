@@ -92,7 +92,9 @@ Application:
 - [ ] App ECO closed & filed to QSR
 - [ ] Server ECO closed & filed to QSR
 - [ ] Insert file path(s) to documentation (ECO, V&V etc):
-- [ ] New version released
+
+*Ensure all above items have been completed before continuing*
+- [ ] New version approved for customer use
 
 **@biosensics/operations :**
 - [ ] Confirm telehealth meeting room on release build
