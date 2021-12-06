@@ -28,7 +28,13 @@ Note: not applicable items will be struck through
 
 Server:
 - [ ] Request Server ECO number from [Quality](mailto:quality@biosensics.com)
-- [ ] Make sure github server secrets are set
+- [ ] APTIBLE_PASSWORD # Aptible bot password
+- [ ] SSH_PRIVATE_KEY # SSH private key
+- [ ] KNOWN_HOSTS # Known hosts
+- [ ] APTIBLE_TEST_SERVER_URL # The TEST server's git remote url on aptible (ends in .git)
+- [ ] APTIBLE_TEST_APP_NAME # The TEST server's application name on aptible
+- [ ] APTIBLE_PROD_SERVER_URL # The PRODUCTION server's git remote url on aptible (ends in .git)
+- [ ] APTIBLE_PROD_APP_NAME # The PRODUCTION server's application name on aptible
 - [ ] Create server release issue in server repository using the Release Issue template 
 - [ ] Deploy server release candidate to Aptible test server
 - [ ] Server ECO Section I submitted to [Quality](mailto:quality@biosensics.com)
