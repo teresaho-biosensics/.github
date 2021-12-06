@@ -21,22 +21,30 @@ Note: not applicable items will be struck through
 **Additional Comments?**
 
 
-
 ***V&V Checklist:***
 
-@biosensics/engineering : 
+**@biosensics/engineering :** 
 - [ ] Team lead determine if full or partial V&V is needed
+
+Server:
 - [ ] Request Server ECO number from [Quality](mailto:quality@biosensics.com)
+- [ ] APTIBLE_PASSWORD # Aptible bot password
+- [ ] SSH_PRIVATE_KEY # SSH private key
+- [ ] KNOWN_HOSTS # Known hosts
+- [ ] APTIBLE_TEST_SERVER_URL # The TEST server's git remote url on aptible (ends in .git)
+- [ ] APTIBLE_TEST_APP_NAME # The TEST server's application name on aptible
+- [ ] APTIBLE_PROD_SERVER_URL # The PRODUCTION server's git remote url on aptible (ends in .git)
+- [ ] APTIBLE_PROD_APP_NAME # The PRODUCTION server's application name on aptible
+- [ ] Create server release issue in server repository using the Release Issue template 
+- [ ] Deploy server release candidate to Aptible test server
 - [ ] Server ECO Section I submitted to [Quality](mailto:quality@biosensics.com)
       (`G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation`)
 - [ ] Server ECO Section I approved
 - [ ] Update Server `CHANGELOG.md` "Unreleased" section
-- [ ] Create server release issue in server repository using the Release Issue template 
-- [ ] Deploy server release candidate to Aptible test server
 - [ ] Confirm any updated Aptible test server configuration values
-- [ ] APK connects to server (indicate if Test, Production, UAT or QA)
-- [ ] Confirm internal Zoom meeting room
-- [ ] Set GitHub secrets per server configuration values and Zoom (if applicable)
+- [ ] Server link to source code:
+
+Application:
 - [ ] Update Application `CHANGELOG.md` "Unreleased" section
 - [ ] Create application release issue in application repository using the Release Issue template
 - [ ] Link this issue to the correct release version
@@ -45,11 +53,13 @@ Note: not applicable items will be struck through
       (`G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation`)
 - [ ] App ECO Section I approved
 - [ ] CLI tools set up
+- [ ] Confirm internal telehealth meeting room
+- [ ] Set GitHub secrets per server configuration values and telehealth meeting room
+- [ ] APK connects to server (indicate if Test, Production, UAT or QA)
 - [ ] Send Application RC build to operations team for V&V
-- [ ] App link to source code
-- [ ] Server link to source code:
+- [ ] App link to source code:
 
-@biosensics/operations & @biosensics/quality :
+**@biosensics/operations & @biosensics/quality :**
 - [ ] V&V Document Released
 - [ ] Complete DCO and submit to [Quality](mailto:quality@biosensics.com)
 - [ ] Hexnode portal/policy set up
@@ -62,26 +72,35 @@ Note: not applicable items will be struck through
 
 *Ensure all above items have been completed before continuing*
 
-@biosensics/test-and-manufacturing :
+**@biosensics/test-and-manufacturing :**
 - [ ] V&V executed
 - [ ] Completed V&V submitted to [Quality](mailto:quality@biosensics.com)
 
-@biosensics/engineering :
-- [ ] App ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
-- [ ] App ECO Section II approved
-- [ ] Server ECO Section II submitted to [Quality](mailto:quality@biosensics.com)
-- [ ] Server ECO Section II approved
-- [ ] Ensure correct Zoom meeting room is set
+**@biosensics/quality :**
+- [ ] Approve completed V&V
+
+**@biosensics/engineering :**
+
+Server:
+- [ ] Send tagged release source code zip to @biosensics/quality
 - [ ] Create server release
 - [ ] Deploy server release to Aptible production server
 - [ ] Confirm any updated Aptible production server configuration values
-- [ ] Merge `release` branch into `master` on server repository
+- [ ] Merge `release` branch into `develop` on server repository
+
+Application:
+- [ ] Send apk and installer to @biosensics/quality
 - [ ] Merge `release` branch into `master` on Application repository
 - [ ] Send release APK to operations and quality for production use
 
 
-@biosensics/quality :
+**@biosensics/quality :**
 - [ ] App ECO closed & filed to QSR
 - [ ] Server ECO closed & filed to QSR
 - [ ] Insert file path(s) to documentation (ECO, V&V etc):
-- [ ] New version released
+
+*Ensure all above items have been completed before continuing*
+- [ ] New version approved for customer use
+
+**@biosensics/operations :**
+- [ ] Confirm telehealth meeting room on release build
