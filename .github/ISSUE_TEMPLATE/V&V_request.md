@@ -69,6 +69,7 @@ Application:
 - [ ] Device enrolled in Hexnode
 - [ ] Equipment set up for V&V execution
 - [ ] Parse account created in correct server
+- [ ] List parse account username:
 
 *Ensure all above items have been completed before continuing*
 
