@@ -90,9 +90,8 @@ Server:
 - [ ] Merge `release` branch into `develop` on server repository
 
 Application:
-- [ ] Send apk and installer to @biosensics/quality
 - [ ] Merge `release` branch into `master` on Application repository
-- [ ] Send release APK to operations and quality for production use
+- [ ] Send release APK and installer to operations and quality for production use
 
 
 **@biosensics/quality :**
