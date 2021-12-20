@@ -1,9 +1,9 @@
 ---
-name: V&V Request
-about: Checklist for V&V
-title: 'V&V Request'
+name: Sensor Request
+about: Request for Sensor Manufacturing
+title: 'Sensor Request'
 labels: 
-assignees: '@abbylindsay'
+assignees: '@teresaho-biosensics'
 
 ---
 ***Please title the issue with the detailed study/project name (not just company/hospital name)***
