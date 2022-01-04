@@ -9,6 +9,7 @@ assignees: '@teresaho-biosensics'
 ***Please title the issue with the detailed study/project name (not just company/hospital name)***
 
 Note: not applicable items will be struck through
+
 **Date of Request:**
 
 **Due Date (Justify):**
