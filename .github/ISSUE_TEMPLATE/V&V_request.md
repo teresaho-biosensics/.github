@@ -69,6 +69,8 @@ Application:
 - [ ] Device enrolled in Hexnode
 - [ ] Equipment set up for V&V execution
 - [ ] Parse account created in correct server
+- [ ] Verify if V&V account should be an internal or external parse account
+- [ ] Set expiration date to parse account
 - [ ] List parse account username:
 
 *Ensure all above items have been completed before continuing*
