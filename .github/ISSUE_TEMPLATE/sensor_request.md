@@ -9,18 +9,6 @@ assignees: '@teresaho-biosensics'
 ---
 ***Please title the issue with the detailed study/project name (not just company/hospital name)***
 
-Note: not applicable items will be struck through
-**Date of Request:**
-
-**Due Date (Justify):**
-
-**Number of Sensors Requested:**
-
-**Firmware:**
-
-**Additional Comments?**
-
-
 ***Pre-Manufacturing Checklist:***
 
 **@biosensics/test-and-manufacturing :**
@@ -32,7 +20,7 @@ Note: not applicable items will be struck through
 
 ***Manufacturing Checklist:***
 
-**@biosensics/test-and-manufacturing :**
+**@biosensics/operations :**
 
 **Sensor Request:**
 
@@ -44,7 +32,14 @@ Note: not applicable items will be struck through
 | 	        |             	|             	|         	|        	  |            	          	|                                 	|
 | 	        |             	|             	|         	|        	  |            	          	|                                 	|
 
+
+***Requestor Fills out form until this point***
+
+
+**@biosensics/test-and-manufacturing :**
+
 **Sensor Progress Tracking:**
+
 *Project:*
 |   	| Board ID 	| Manu Tested? 	| Firmware Uploaded? 	| Welded? 	| Calibrated? 	| Epoxied? 	| Verified and Ready for Shipment?	| Issues:          |
 |---	|----------	|-------------	|-------------------	|--------	  |------------	  |---------	|---------------------------------	|----------------  |
