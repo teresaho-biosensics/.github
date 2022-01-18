@@ -7,7 +7,7 @@ labels:
 assignees: '@teresaho-biosensics'
 
 ---
-***Please title the issue with the detailed study/project name (not just company/hospital name)***
+***Please title the issue with the date***
 
 ***Pre-Manufacturing Checklist:***
 
