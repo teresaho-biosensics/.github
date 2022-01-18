@@ -34,13 +34,25 @@ Note: not applicable items will be struck through
 
 **@biosensics/test-and-manufacturing :**
 
-|   	| Board ID 	| Manu Tested 	| Firmware Uploaded 	| Welded 	| Calibrated 	| Epoxied 	| Verified and Ready for Shipment 	|
-|---	|----------	|-------------	|-------------------	|--------	|------------	|---------	|---------------------------------	|
-| 1 	|          	|             	|                   	|        	|            	|         	|                                 	|
-| 2 	|          	|             	|                   	|        	|            	|         	|                                 	|
-| 3 	|          	|             	|                   	|        	|            	|         	|                                 	|
-| 4 	|          	|             	|                   	|        	|            	|         	|                                 	|
-| 5 	|          	|             	|                   	|        	|            	|         	|                                 	|
+**Sensor Request:**
+
+| Project  	| # of Sensors 	| Sensor Type 	| Firmware 	| Due Date	| Due Date Justification 	| Other Notes                     	|
+|------     |----------	    |-------------	|---------	|--------	  |---------------------	  |---------------------------------	|
+|          	|             	|             	|          	|        	  |            		          |                                 	|
+| 	        |             	|             	|         	|        	  |            	          	|                                 	|
+| 	        |             	|             	|          	|        	  |            	          	|                                 	|
+| 	        |             	|             	|         	|        	  |            	          	|                                 	|
+| 	        |             	|             	|         	|        	  |            	          	|                                 	|
+
+**Sensor Progress Tracking:**
+*Project:*
+|   	| Board ID 	| Manu Tested? 	| Firmware Uploaded? 	| Welded? 	| Calibrated? 	| Epoxied? 	| Verified and Ready for Shipment?	| Issues:          |
+|---	|----------	|-------------	|-------------------	|--------	  |------------	  |---------	|---------------------------------	|----------------  |
+| 1 	|          	|             	|                   	|        	  |               |         	|                                 	|                  |
+| 2 	|          	|             	|                   	|        	  |            	  |         	|                                 	|                  |
+| 3 	|          	|             	|                   	|        	  |              	|         	|                                 	|                  |
+| 4 	|          	|             	|                   	|        	  |              	|         	|                                 	|                  |
+| 5 	|          	|             	|                   	|        	  |               |         	|                                 	|                  |
 
 
 =======
