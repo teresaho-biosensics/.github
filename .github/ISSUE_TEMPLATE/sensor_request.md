@@ -7,19 +7,7 @@ labels:
 assignees: '@teresaho-biosensics'
 
 ---
-***Please title the issue with the detailed study/project name (not just company/hospital name)***
-
-Note: not applicable items will be struck through
-**Date of Request:**
-
-**Due Date (Justify):**
-
-**Number of Sensors Requested:**
-
-**Firmware:**
-
-**Additional Comments?**
-
+***Please title the issue with the date***
 
 ***Pre-Manufacturing Checklist:***
 
@@ -32,15 +20,34 @@ Note: not applicable items will be struck through
 
 ***Manufacturing Checklist:***
 
+**@biosensics/operations :**
+
+**Sensor Request:**
+
+| Project  	| # of Sensors 	| Sensor Type 	| Firmware 	| Due Date	| Due Date Justification 	| Other Notes                     	|
+|------     |----------	    |-------------	|---------	|--------	  |---------------------	  |---------------------------------	|
+|          	|             	|             	|          	|        	  |            		          |                                 	|
+| 	        |             	|             	|         	|        	  |            	          	|                                 	|
+| 	        |             	|             	|          	|        	  |            	          	|                                 	|
+| 	        |             	|             	|         	|        	  |            	          	|                                 	|
+| 	        |             	|             	|         	|        	  |            	          	|                                 	|
+
+
+***Requestor Fills out form until this point***
+
+
 **@biosensics/test-and-manufacturing :**
 
-|   	| Board ID 	| Manu Tested 	| Firmware Uploaded 	| Welded 	| Calibrated 	| Epoxied 	| Verified and Ready for Shipment 	|
-|---	|----------	|-------------	|-------------------	|--------	|------------	|---------	|---------------------------------	|
-| 1 	|          	|             	|                   	|        	|            	|         	|                                 	|
-| 2 	|          	|             	|                   	|        	|            	|         	|                                 	|
-| 3 	|          	|             	|                   	|        	|            	|         	|                                 	|
-| 4 	|          	|             	|                   	|        	|            	|         	|                                 	|
-| 5 	|          	|             	|                   	|        	|            	|         	|                                 	|
+**Sensor Progress Tracking:**
+
+*Project:*
+|   	| Board ID 	| Manu Tested? 	| Firmware Uploaded? 	| Welded? 	| Calibrated? 	| Epoxied? 	| Verified and Ready for Shipment?	| Issues:          |
+|---	|----------	|-------------	|-------------------	|--------	  |------------	  |---------	|---------------------------------	|----------------  |
+| 1 	|          	|             	|                   	|        	  |               |         	|                                 	|                  |
+| 2 	|          	|             	|                   	|        	  |            	  |         	|                                 	|                  |
+| 3 	|          	|             	|                   	|        	  |              	|         	|                                 	|                  |
+| 4 	|          	|             	|                   	|        	  |              	|         	|                                 	|                  |
+| 5 	|          	|             	|                   	|        	  |               |         	|                                 	|                  |
 
 
 =======
