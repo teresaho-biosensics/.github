@@ -1,12 +1,14 @@
 ---
 name: Server Template Update
 about: A checklist of servers to consider this update for
-title: Server Template Update
+title:  Server Template Update for PR --
 labels: cherry-pick
 assignees: ''
 ---
 ---
-Please create an issue for every bugfix / feature update to the clinical-trial-parse-server-template repository and fill out below.
+Please create an issue for every bugfix / feature update to the clinical-trial-parse-server-template repository.
+
+Update the issue title with the PR number then, fill out below.
 
 ---
 
