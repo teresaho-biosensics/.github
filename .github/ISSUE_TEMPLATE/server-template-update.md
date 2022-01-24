@@ -5,19 +5,16 @@ title:  Server Template Update for PR --
 labels: cherry-pick
 assignees: ''
 ---
----
-Please create an issue for every bugfix / feature update to the clinical-trial-parse-server-template repository.
 
-Update the issue title with the PR number then, fill out below.
+**Please create an issue for every bugfix / feature update to the clinical-trial-parse-server-template repository.**
 
----
+**Update the issue title with the PR number then, fill out below.**
+
 
 Approved template PR Link:
 
---- 
 Squash and merged commit in template: 
 
----
 
 Determine which repositories need this update. Edit in links to PRs that cherry-pick this update into their respective repository. Only check off servers that have had this update merged their develop branch.
 
