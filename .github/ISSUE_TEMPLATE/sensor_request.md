@@ -1,4 +1,3 @@
-
 ---
 name: Sensor Request
 about: Request for Sensor Manufacturing
