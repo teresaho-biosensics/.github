@@ -18,6 +18,7 @@ Squash and merged commit in template:
 
 Determine which repositories need this update. Edit in links to PRs that cherry-pick this update into their respective repository. Only check off servers that have had this update merged their develop branch.
 
+- [ ] [horizon-msa-server](https://github.com/biosensics/horizon-msa-server)
 - [ ] [mgh-psp-server](https://github.com/biosensics/mgh-psp-server)
 - [ ] [nili-parse-server](https://github.com/biosensics/nili-parse-server)
 - [ ] [regeneron-parse-server](https://github.com/biosensics/regeneron-parse-server)
