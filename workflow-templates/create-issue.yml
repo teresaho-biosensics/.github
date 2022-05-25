@@ -1,0 +1,35 @@
+name: "detect V&V issue and create a new issue"
+
+# run on new issue open
+on:
+  issues:
+    types: 
+      - opened
+
+# first job test workflow run correct.
+jobs:
+  automation_job:
+    name: "V&V Issue Creator job"
+    runs-on: ubuntu-latest
+    env:
+      # add all environment variables
+      CURRENT_OWNER: ${{ github.repository_owner }}
+      CURRENT_REPO: ${{ github.event.repository.name }}
+      CURRENT_ISSUES_TITLE: ${{ github.event.issue.title }}
+      CURRENT_ISSUES_ID: ${{ github.event.issue.number }}
+      GITHUB_TOKEN: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+    permissions:
+      issues: read
+    if: startsWith(github.event.issue.title, 'V&V Request')
+    steps:
+      # setup secret access token
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+          token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+      - name: Install environment
+        run: |
+          cd v-v-checklist
+          npm install
+      - name: Run script
+        run: node v-v-checklist/. $CURRENT_OWNER $CURRENT_REPO $CURRENT_ISSUES_ID
