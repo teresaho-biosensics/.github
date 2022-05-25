@@ -20,7 +20,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
     permissions:
       issues: read
-    if: startsWith(github.event.issue.title, 'V&V Request')
+    if: contains(github.event.issue.title, 'V&V Request')
     steps:
       # setup secret access token
       - uses: actions/checkout@v2
