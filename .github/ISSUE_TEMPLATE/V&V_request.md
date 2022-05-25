@@ -38,7 +38,6 @@ Server:
 - [ ] Create server release issue in server repository using the Release Issue template 
 - [ ] Deploy server release candidate to Aptible test server
 - [ ] Server ECO Section I submitted to [Quality](mailto:quality@biosensics.com)
-      (`G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation`)
 - [ ] Server ECO Section I approved
 - [ ] Update Server `CHANGELOG.md` "Unreleased" section
 - [ ] Confirm any updated Aptible test server configuration values
@@ -50,14 +49,20 @@ Application:
 - [ ] Link this issue to the correct release version
 - [ ] Request App ECO number from [Quality](mailto:quality@biosensics.com)
 - [ ] App ECO Section I submitted to [Quality](mailto:quality@biosensics.com)
-      (`G:\Shared drives\QSR\BS-02 Quality System Procedures (SOPs)\BS-02-0021_Software Changes, Releases and Documentation`)
 - [ ] App ECO Section I approved
 - [ ] CLI tools set up
 - [ ] Confirm internal telehealth meeting room
 - [ ] Set GitHub secrets per server configuration values and telehealth meeting room
 - [ ] APK connects to server (indicate if Test, Production, UAT or QA)
 - [ ] Send Application RC build to operations team for V&V
+- [ ] Link release to V&V issue
 - [ ] App link to source code:
+
+Analyzer Tool:
+- [ ] Request ECO number from [Quality](mailto:quality@biosensics.com)
+- [ ] ECO Section I submitted to [Quality](mailto:quality@biosensics.com)
+- [ ] ECO Section I approved
+- [ ] Send Analyzer RC build to operations team for V&V
 
 **@biosensics/operations & @biosensics/quality :**
 - [ ] V&V Document Released
@@ -68,9 +73,10 @@ Application:
 - [ ] Sensor firmware is correct
 - [ ] Device enrolled in Hexnode
 - [ ] Equipment set up for V&V execution
+- [ ] Analyzer tool set up for V&V execution
 - [ ] Parse account created in correct server
 - [ ] Verify if V&V account should be an internal or external Parse account
-- [ ] Enter 'study end date' for Parse account in CLI tools
+- [ ] Enter 'study end date' for Parse account in CLI tools (TAK only)
 - [ ] List parse account username:
 
 *Ensure all above items have been completed before continuing*
@@ -97,9 +103,8 @@ Application:
 
 
 **@biosensics/quality :**
-- [ ] App ECO closed & filed to QSR
-- [ ] Server ECO closed & filed to QSR
-- [ ] Insert file path(s) to documentation (ECO, V&V etc):
+- [ ] App ECO closed & filed to Greenlight Guru
+- [ ] Server ECO closed & filed to Greenlight Guru
 
 *Ensure all above items have been completed before continuing*
 - [ ] New version approved for customer use
