@@ -1,10 +1,9 @@
-name: "detect V&V issue and create a new issue"
+name: "listen for dispatches to create v&v issues in a repo"
 
 # run on new issue open
 on:
-  issues:
-    types: 
-      - opened
+  repository_dispatch:
+    types: [v-v-request]
 
 # first job test workflow run correct.
 jobs:
@@ -13,14 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # add all environment variables
-      CURRENT_OWNER: ${{ github.repository_owner }}
-      CURRENT_REPO: ${{ github.event.repository.name }}
-      CURRENT_ISSUES_TITLE: ${{ github.event.issue.title }}
-      CURRENT_ISSUES_ID: ${{ github.event.issue.number }}
+      CURRENT_OWNER: ${{ github.event.client_payload.repository_owner }}
+      CURRENT_REPO: ${{ github.event.client_payload.repository_name }}
+      CURRENT_ISSUES_TITLE: ${{ github.event.client_payload.title }}
+      CURRENT_ISSUES_ID: ${{ github.event.client_payload.issue_number }}
       GITHUB_TOKEN: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
     permissions:
       issues: read
-    if: contains(github.event.issue.title, 'V&V Request')
+    if: contains(github.event.client_payload.title, 'V&V Request')
     steps:
       # setup secret access token
       - uses: actions/checkout@v2
