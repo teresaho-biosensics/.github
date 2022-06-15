@@ -16,7 +16,7 @@ jobs:
       CURRENT_REPO: ${{ github.event.client_payload.repository_name }}
       CURRENT_ISSUES_TITLE: ${{ github.event.client_payload.title }}
       CURRENT_ISSUES_ID: ${{ github.event.client_payload.issue_number }}
-      GITHUB_TOKEN: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN || github.token }}
     permissions:
       issues: read
     if: contains(github.event.client_payload.title, 'V&V Request')
@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: main
-          token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+          token: $GITHUB_TOKEN
       - name: Install environment
         run: |
           cd v-v-checklist
