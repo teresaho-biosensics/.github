@@ -108,7 +108,8 @@ const createAPICall = function (owner, repo, octokit, title, times) {
         octokit.request('POST /repos/{owner}/{repo}/issues', {
             owner: owner,
             repo: repo,
-            title: title
+            title: title,
+            labels: ['V&V Request Item']
         }).then((response) => {
             console.log('create api call success', times)
             resolve(response.data.number)
