@@ -1,12 +1,8 @@
 name: "detect V&V issue and dispatch it to the v-v-automation repo"
-
-# run on new issue open
 on:
   issues:
     types: 
       - opened
-
-# first job test workflow run correct.
 jobs:
   automation_job:
     name: "V&V Issue Creator job"
