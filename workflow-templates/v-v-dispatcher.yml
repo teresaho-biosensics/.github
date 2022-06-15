@@ -15,11 +15,6 @@ jobs:
       issues: read
     if: contains(github.event.issue.title, 'V&V Request')
     steps:
-      # setup secret access token
-      - uses: actions/checkout@v2
-        with:
-          ref: main
-          token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
