@@ -1,0 +1,36 @@
+name: "detect V&V issue and dispatch it to the .github repo"
+
+# run on new issue open
+on:
+  issues:
+    types: 
+      - opened
+
+# first job test workflow run correct.
+jobs:
+  automation_job:
+    name: "V&V Issue Creator job"
+    runs-on: ubuntu-latest
+    env:
+      # add all environment variables
+      CURRENT_OWNER: ${{ github.repository_owner }}
+      CURRENT_REPO: ${{ github.event.repository.name }}
+      CURRENT_ISSUES_TITLE: ${{ github.event.issue.title }}
+      CURRENT_ISSUES_ID: ${{ github.event.issue.number }}
+      GITHUB_TOKEN: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+    permissions:
+      issues: read
+    if: contains(github.event.issue.title, 'V&V Request')
+    steps:
+      # setup secret access token
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+          token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
+          repository: biosensics/.github
+          event-type: v-v-request
+          client-payload: '{"repository_owner": "${{ github.repository_owner }}", "repository_name": "${{ github.event.repository.name }}", "title": "${{ github.event.issue.title }}", "issue_number": "${{ github.event.issue.number }}"}'
