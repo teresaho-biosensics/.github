@@ -16,7 +16,7 @@ jobs:
       CURRENT_REPO: ${{ github.event.client_payload.repository_name }}
       CURRENT_ISSUES_TITLE: ${{ github.event.client_payload.title }}
       CURRENT_ISSUES_ID: ${{ github.event.client_payload.issue_number }}
-      GITHUB_TOKEN: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN || github.token }}
+      GITHUB_TOKEN: ${{ github.event.client_payload.token }}
     permissions:
       issues: read
     if: contains(github.event.client_payload.title, 'V&V Request')
