@@ -24,6 +24,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.ROBOT_PERSONAL_ACCESS_TOKEN }}
-          repository: biosensics/.github
+          repository: biosensics/v-v-automation
           event-type: v-v-request
           client-payload: '{"repository_owner": "${{ github.repository_owner }}", "repository_name": "${{ github.event.repository.name }}", "title": "${{ github.event.issue.title }}", "issue_number": "${{ github.event.issue.number }}"}'
