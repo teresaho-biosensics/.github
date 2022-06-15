@@ -1,4 +1,4 @@
-name: "detect V&V issue and dispatch it to the .github repo"
+name: "detect V&V issue and dispatch it to the v-v-automation repo"
 
 # run on new issue open
 on:
