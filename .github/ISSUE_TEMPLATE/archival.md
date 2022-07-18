@@ -11,6 +11,7 @@ Archival Checklist:
 - [ ] Back up of application source code
 - [ ] Back up of server software code
 - [ ] Back up of data processing code
+- [ ] Back up of production database
 - [ ] Audit Logs
 - [ ] Collect relevant screenshots
 - [ ] Upload all to Box
