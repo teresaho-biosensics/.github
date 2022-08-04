@@ -1,16 +1,12 @@
 name: "Bug!"
-description: Identification of a new issue
+description: "Identification of a new issue"
 title: "[Bug]: "
 labels: ["bug"]
 assignees: 
   -abbylindsay
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
+  - type: textarea
     id: description
     attributes:
       label: Describe the bug - actual behavior
@@ -18,15 +14,15 @@ body:
       placeholder: Help!
     validations:
       required: true
-- type: input
-    id: indentification
+- type: textarea
+    id: expected behavior
     attributes:
       label: What is the expected behavior?
       description: Be descriptive: what should be happening? Provide examples if possible (and screenshots!)
       placeholder: 
     validations:
       required: true
-- type: input
+- type: textarea
     id: indentification
     attributes:
       label: How was this bug identified
@@ -34,7 +30,7 @@ body:
       placeholder: 
     validations:
       required: true
-- type: input
+- type: textarea
     id: investigation
     attributes:
       label: Investigation so far
@@ -56,7 +52,7 @@ body:
         - 5
      validations:
       required: true
-- type: input
+- type: textarea
     id: context
     attributes:
       label: Additional Contect
