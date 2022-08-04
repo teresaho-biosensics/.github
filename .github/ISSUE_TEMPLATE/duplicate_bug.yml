@@ -14,7 +14,7 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: Link to intial bug issue:
+      label: "Link to intial bug issue:"
       placeholder: "https://github.com/biosensics/mgh-psp/issues/547"
     validations:
       required: true
