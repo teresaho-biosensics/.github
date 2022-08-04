@@ -20,7 +20,7 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: Additional Context:
-      description: Screenshots, app version, firmware version, etc.
+      label: "Additional Context:"
+      description: "Screenshots, app version, firmware version, etc."
     validations:
       required: true
