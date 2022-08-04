@@ -14,15 +14,14 @@ body:
       placeholder: Help!
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: expected behavior
     attributes:
       label: What is the expected behavior?
-      description: Be descriptive: what should be happening? Provide examples if possible (and screenshots!)
-      placeholder: 
+      description: "Be descriptive: what should be happening? Provide examples if possible (and screenshots!)"
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: indentification
     attributes:
       label: How was this bug identified
@@ -30,15 +29,15 @@ body:
       placeholder: 
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: investigation
     attributes:
       label: Investigation so far
-      description: What has been done thus far to resolve/investigate the bug? How to reproduce? 
+      description: What has been done thus far to resolve/investigate the bug? How to reproduce?
       placeholder: 
     validations:
       required: true
-- type: dropdown
+  - type: dropdown
     id: Priority
     attributes:
       label: Severity level
@@ -50,9 +49,9 @@ body:
         - 3
         - 4
         - 5
-     validations:
-      required: true
-- type: textarea
+      validations:
+       required: true
+  - type: textarea
     id: context
     attributes:
       label: Additional Contect
