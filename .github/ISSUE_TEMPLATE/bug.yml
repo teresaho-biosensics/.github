@@ -24,7 +24,7 @@ body:
     attributes:
       label: How was this bug identified
       description: Who saw it? What was the context?
-      placeholder: @ana-enriquez was notified by the study coordinator that the participants could not see the entire video screen on the tablet
+      placeholder: "@ana-enriquez was notified by the study coordinator that the participants could not see the entire video screen on the tablet"
     validations:
       required: true
   - type: textarea
