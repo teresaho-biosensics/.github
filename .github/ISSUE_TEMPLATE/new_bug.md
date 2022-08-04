@@ -1,32 +1,66 @@
----
 name: New Bug
-about: Identification of a new issue
-title: 'New Bug'
-labels: 
-assignees: '@abbylindsay'
+description: Identification of a new issue
+title: "[Bug]: "
+labels: ["bug"]
+assignees: 
+  -abbylindsay
 
----
-
-**Describe the bug- why is it wrong?:**
-<!-- A clear and concise description of what you/the participant is seeing and why it is a problem. -->
-
-**How was this bug identified:**
-<!-- Who saw it? What was the context? -->
-
-**How to reproduce?:**
-<!-- If no instructions, you MUST provide an explaination as to why not. -->
-
-**Troubleshooting completed so far:**
-<!-- What has been done thus far to resolve/investigate the bug? -->
-
-**Expected behavior?:**
-<!-- Be descriptive: what should be happening? Provide examples if possible. -->
-
-**Screenshot(s):**
-<!-- Show the bug. -->
-
-**Priority level?:**
-<!-- 1- a V&V will not be run for this issue alone. 2- Want to have 3- Causing minor impact to study/participant 4- Causing big impact to study/participant 5- BAD BAD BAD -->
-
-**Additional Context:**
-<!-- The more info the better -->
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: description
+    attributes:
+      label: Describe the bug - actual behavior
+      description: A clear and concise description of what you/the participant is seeing and why it is a problem. Include screenshots!
+      placeholder: Help!
+    validations:
+      required: true
+- type: input
+    id: indentification
+    attributes:
+      label: What is the expected behavior?
+      description: Be descriptive: what should be happening? Provide examples if possible (and screenshots!)
+      placeholder: 
+    validations:
+      required: true
+- type: input
+    id: indentification
+    attributes:
+      label: How was this bug identified
+      description: Who saw it? What was the context?
+      placeholder: 
+    validations:
+      required: true
+- type: input
+    id: investigation
+    attributes:
+      label: Investigation so far
+      description: What has been done thus far to resolve/investigate the bug? How to reproduce? 
+      placeholder: 
+    validations:
+      required: true
+- type: dropdown
+    id: Priority
+    attributes:
+      label: Severity level
+      description: 1- a V&V will not be run for this issue alone. 2- Want to have 3- Causing minor impact to study/participant 4- Causing big impact to study/participant 5- BAD BAD BAD
+      multiple: false
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+     validations:
+      required: true
+- type: input
+    id: context
+    attributes:
+      label: Additional Contect
+      description: App version, firmware version, other information?
+      placeholder: Please look it up
+    validations:
+      required: true
