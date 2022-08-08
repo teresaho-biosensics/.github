@@ -1,7 +1,7 @@
 name: "Duplicate Bug!"
 description: "Bug is present within multiple projets"
 title: "[Duplicate Bug]: "
-labels: ["duplicate bug"]
+labels: ["duplicate"]
 assignees: 
   -abbylindsay
 
