@@ -47,7 +47,7 @@ body:
      required: true
   - type: textarea
     attributes:
-      label: Additional Contect
+      label: Additional Context
       description: App version, firmware version, other information?
     validations:
       required: true
