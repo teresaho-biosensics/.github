@@ -1,0 +1,56 @@
+name: "Bug!"
+description: "Identification of a new issue"
+title: "[Bug]: "
+labels: ["bug"]
+assignees: 
+  -abbylindsay
+
+body:
+  - type: textarea
+    attributes:
+      label: Describe the bug - actual behavior
+      description: A clear and concise description of what you/the participant is seeing and why it is a problem. Include screenshots!
+      placeholder: "The play bar is covering up the bottom of the video, obscuring a portion of the video to the user, as shown in the attached screenshot"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What is the expected behavior?
+      description: "Be descriptive: what should be happening? Provide examples if possible (and screenshots!)"
+      placeholder: The expected behavior is that the video is completely visible and not blocked by the play bar
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: How was this bug identified
+      description: Who saw it? What was the context?
+      placeholder: "@ana-enriquez was notified by the study coordinator that the participants could not see the entire video screen on the tablet"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Investigation so far
+      description: What has been done thus far to resolve/investigate the bug? How to reproduce?
+      placeholder: Confirmed that the play bar does indeed obscure the video and the playbar needs to be moved down a half an inch
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Severity level
+      description: 1- a V&V will not be run for this issue alone. 2- Want to have 3- Causing minor impact to study/participant 4- Causing big impact to study/participant 5- BAD BAD BAD
+      multiple: false
+      options:
+        - "1 - not impacting participants"
+        - 2
+        - "3 - minor impact"
+        - 4
+        - "5 - crisis"
+    validations:
+     required: true
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: App version, firmware version, other information?
+      placeholder: Release version 1.1.14
+    validations:
+      required: true
