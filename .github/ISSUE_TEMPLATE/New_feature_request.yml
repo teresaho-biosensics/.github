@@ -24,11 +24,13 @@ body:
     attributes:
       label: Describe alternatives you have considered
       description: Does this work need to be done? Is there a simpler solution?
+    validations:
       required: true
   - type: textarea
     attributes:
       label: "New UI or UI Update? Screenshot(s):"
       description: "Please be specific what the UI should be - size, color, shape, location, etc."
+    validations:
       required: true
   - type: dropdown
     attributes:
