@@ -27,8 +27,8 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: New UI or UI Update? Screenshot(s):
-      description: Please be specific what the UI should be - size, color, shape, location, etc.
+      label: "New UI or UI Update? Screenshot(s):"
+      description: "Please be specific what the UI should be - size, color, shape, location, etc."
       required: true
   - type: dropdown
     attributes:
