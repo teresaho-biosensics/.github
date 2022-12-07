@@ -15,6 +15,7 @@ assignees: '@teresaho-biosensics'
 - [ ] Welder Maintenence Completed for the Month [Date Completed: ]
 - [ ] Welder Logs for Previous Month Uploaded [Link: ]
 - [ ] Batch Number Updated in Spreadsheet [Updated Batch Number: ]
+- [ ] Ensure all printed documents in control room are current revision
 
 
 ***Manufacturing Checklist:***
